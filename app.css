@@ -23,6 +23,10 @@ p {
 	max-width: 225px;
 }
 
+#container1 {
+	display: none;
+}
+
 .info {
 	min-width: 225px;
 	max-width: 225px;

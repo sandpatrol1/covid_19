@@ -259,6 +259,7 @@ const countryListAllIsoData = [
 	{code: "AX", code3: "ALA", name: "Åland Islands", number: "248"}
 ];
 
+const container = document.querySelector("#container1");
 const dateH2 = document.querySelector("#date");
 const casesH2 = document.querySelector("#cases");
 const deathsH2 = document.querySelector("#deaths");
@@ -282,6 +283,7 @@ const getData = (url) => {
 const insertData = ({data}) => {
 	const {result} = data;
 	console.log(result);
+	container.style.display = "block";
 	const lastUpdated = Object.keys(result);
 	dateH2.innerText = `Date: ${lastUpdated}`;
 	casesH2.innerText = `Total Cases: ${result[lastUpdated].confirmed}`;
