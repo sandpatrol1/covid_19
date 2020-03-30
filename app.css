@@ -1,0 +1,26 @@
+h1,
+h2,
+h3,
+p {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#title {
+	background-color: #000000;
+	color: #ffffff;
+	text-align: center;
+}
+
+#data {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.info {
+	min-width: 225px;
+	border: #000000 1px solid;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
