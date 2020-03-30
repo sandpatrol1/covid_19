@@ -18,8 +18,14 @@ p {
 	align-items: center;
 }
 
+#countries {
+	min-width: 225px;
+	max-width: 225px;
+}
+
 .info {
 	min-width: 225px;
+	max-width: 225px;
 	border: #000000 1px solid;
 	padding-top: 10px;
 	padding-bottom: 10px;
