@@ -24,8 +24,9 @@ select {
 #countries {
 	min-width: 250px;
 	max-width: 250px;
-	height: 25px;
+	height: 30px;
 	font-size: 16px;
+	border: 1px solid;
 }
 
 #container1 {
