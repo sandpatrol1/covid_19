@@ -1,5 +1,4 @@
-// https://documenter.getpostman.com/view/2568274/SzS8rjbe?version=latest#intro
-// https://covidapi.info/api/v1/country/DNK/latest
+// API used for fetching COVID-19 data https://documenter.getpostman.com/view/2568274/SzS8rjbe?version=latest#intro
 
 // Country names object using 3-letter country codes to reference country name
 // ISO 3166 Alpha-3 Format: [3 letter Country Code]: [Country Name]
@@ -266,6 +265,7 @@ const deathsH2 = document.querySelector("#deaths");
 const recoveredH2 = document.querySelector("#recovered");
 const countrySelector = document.querySelector("#countries");
 
+// Update countries select with all countries name and value as country code
 for (let country of countryListAllIsoData) {
 	const {name, code3} = country;
 	const countryName = name;
@@ -280,20 +280,22 @@ const getData = (url) => {
 	return axios.get(url);
 };
 
+// Insert COVID-19 data H2s
 const insertData = ({data}) => {
 	const {result} = data;
-	console.log(result);
-	container.style.display = "block";
-	const lastUpdated = Object.keys(result);
+	container.style.display = "block"; // Show the container and the children H2 + p
+	const lastUpdated = Object.keys(result); // Date of latest data
 	dateH2.innerText = `Date: ${lastUpdated}`;
 	casesH2.innerText = `Cases: ${result[lastUpdated].confirmed}`;
 	deathsH2.innerText = `Deaths: ${result[lastUpdated].deaths}`;
 	recoveredH2.innerText = `Recovered: ${result[lastUpdated].recovered}`;
 };
 
+// Trigger fetch of country specific COVID-19 data on select change
+// Insert data 
+// Log errors and display no data if error
 countrySelector.addEventListener("change", (event) => {
 	const country3Letters = event.target.value;
-	console.log(country3Letters);
 	// prettier-ignore
 	getData(`https://covidapi.info/api/v1/country/${country3Letters}/latest`)
 	.then(insertData)
