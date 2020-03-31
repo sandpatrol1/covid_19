@@ -19,8 +19,10 @@ p {
 }
 
 #countries {
-	min-width: 225px;
-	max-width: 225px;
+	min-width: 250px;
+	max-width: 250px;
+	height: 25px;
+	font-size: 12px;
 }
 
 #container1 {
@@ -28,8 +30,8 @@ p {
 }
 
 .info {
-	min-width: 225px;
-	max-width: 225px;
+	min-width: 250px;
+	max-width: 250px;
 	border: #000000 1px solid;
 	padding-top: 10px;
 	padding-bottom: 10px;

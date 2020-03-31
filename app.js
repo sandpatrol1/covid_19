@@ -286,9 +286,9 @@ const insertData = ({data}) => {
 	container.style.display = "block";
 	const lastUpdated = Object.keys(result);
 	dateH2.innerText = `Date: ${lastUpdated}`;
-	casesH2.innerText = `Total Cases: ${result[lastUpdated].confirmed}`;
-	deathsH2.innerText = `Total Deaths: ${result[lastUpdated].deaths}`;
-	recoveredH2.innerText = `Total Recovered: ${result[lastUpdated].recovered}`;
+	casesH2.innerText = `Cases: ${result[lastUpdated].confirmed}`;
+	deathsH2.innerText = `Deaths: ${result[lastUpdated].deaths}`;
+	recoveredH2.innerText = `Recovered: ${result[lastUpdated].recovered}`;
 };
 
 countrySelector.addEventListener("change", (event) => {
@@ -299,5 +299,10 @@ countrySelector.addEventListener("change", (event) => {
 	.then(insertData)
 	.catch((err) => {
 		console.log("ERROR", err);
+		container.style.display = "block";
+		dateH2.innerText = `Date: No data`;
+		casesH2.innerText = `Cases: No data`;
+		deathsH2.innerText = `Deaths: No data`;
+		recoveredH2.innerText = `Recovered: No Data`;
 	});
 });
