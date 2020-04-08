@@ -1,5 +1,6 @@
 // API used for fetching COVID-19 data https://documenter.getpostman.com/view/2568274/SzS8rjbe?version=latest#intro
 const container = document.querySelector("#container1");
+const container2 = document.querySelector("#container2");
 const dateH2 = document.querySelector("#date");
 const casesH2 = document.querySelector("#cases");
 const deathsH2 = document.querySelector("#deaths");
@@ -78,6 +79,7 @@ countrySelector.addEventListener("change", (event) => {
 
 // line chart
 const chartMaker = (dataObj) => {
+	container2.style.display = "block"; // Show the container and the children H2 + p
 	new Chart(document.getElementById("line-chart"), {
 		type: "line",
 		data: {

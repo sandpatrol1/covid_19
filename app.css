@@ -34,6 +34,10 @@ select {
 	display: none;
 }
 
+#container2 {
+	display: none;
+}
+
 .info {
 	min-width: 300px;
 	max-width: 300px;
