@@ -23,8 +23,8 @@ select {
 }
 
 #countries {
-	min-width: 250px;
-	max-width: 250px;
+	min-width: 300px;
+	max-width: 300px;
 	height: 30px;
 	font-size: 16px;
 	border: 1px solid;
@@ -35,8 +35,8 @@ select {
 }
 
 .info {
-	min-width: 250px;
-	max-width: 250px;
+	min-width: 300px;
+	max-width: 300px;
 	border-bottom: #000000 1px solid;
 	padding-top: 10px;
 	padding-bottom: 10px;
