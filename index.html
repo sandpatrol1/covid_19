@@ -14,19 +14,26 @@
   <div id="wrapper">
       <h1 id="title">COVID-19 Status</h1>
       <div id="data">
-        <h2>Select Country</h2>
-        <select name="countries" id="countries"></select>
-        <div id="container1">
-            <h2 id="date" class="info"></h2>
-            <h2 id="cases" class="info"></h2>
-            <h2 id="deaths" class="info"></h2>
-            <h2 id="recovered" class="info"></h2>
-            <p id="disclaimer" class="info">Country specific data is subject to different approaches to testing, diagnosis etc. This app uses data from John Hopkins University made available through API initiative here: https://covidapi.info/</p>
+          <h2>Select Country</h2>
+          <select name="countries" id="countries"></select>
+          <div id="container1">
+              <h2 id="date" class="info"></h2>
+              <h2 id="cases" class="info"></h2>
+              <h2 id="deaths" class="info"></h2>
+              <h2 id="recovered" class="info"></h2>
+          </div>
+          <div class="container">
+            <canvas id="line-chart" width="300" height="350"></canvas>
+          </div>
+        <div id="container2">
+          <p id="disclaimer" class="info">Country specific data is subject to different approaches to testing, diagnosis etc. This app uses data from John Hopkins University made available through API initiative here: https://covidapi.info/ Notice: data is subject to errors.</p>
         </div>
       </div>
   </div>
 
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+  <script src="country_code.js"></script>
   <script src="app.js"></script>
 </body>
 
