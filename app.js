@@ -73,6 +73,7 @@ countrySelector.addEventListener("change", (event) => {
 			console.log('success')
 		})
 		.catch((err) => {
+			container2.style.display = "none"; // Show the container and the children H2 + p
 			console.log("ERROR", err);
 		})
 });
