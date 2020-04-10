@@ -1,18 +1,18 @@
 // API used for fetching COVID-19 data https://documenter.getpostman.com/view/2568274/SzS8rjbe?version=latest#intro
-const container = document.querySelector("#container1");
-const container2 = document.querySelector("#container2");
-const dateH2 = document.querySelector("#date");
-const casesH2 = document.querySelector("#cases");
-const deathsH2 = document.querySelector("#deaths");
-const recoveredH2 = document.querySelector("#recovered");
-const countrySelector = document.querySelector("#countries");
+const container = document.querySelector('#container1');
+const container2 = document.querySelector('#container2');
+const dateH2 = document.querySelector('#date');
+const casesH2 = document.querySelector('#cases');
+const deathsH2 = document.querySelector('#deaths');
+const recoveredH2 = document.querySelector('#recovered');
+const countrySelector = document.querySelector('#countries');
 
 // Update countries select with all countries name and value as country code
 for (let country of countryListAllIsoData) {
 	const {name, code3} = country;
 	const countryName = name;
 	const countryCode = code3;
-	const option = document.createElement("option");
+	const option = document.createElement('option');
 	option.value = code3;
 	option.innerText = name;
 	countrySelector.append(option);
@@ -25,7 +25,7 @@ const getData = (url) => {
 // Insert COVID-19 recent data H2s
 const insertData = ({data}) => {
 	const {result} = data;
-	container.style.display = "block"; // Show the container and the children H2 + p
+	container.style.display = 'block'; // Show the container and the children H2 + p
 	const lastUpdated = Object.keys(result); // Date of latest data
 	dateH2.innerText = `Date: ${lastUpdated}`;
 	casesH2.innerText = `Cases: ${result[lastUpdated].confirmed}`;
@@ -52,7 +52,7 @@ const chartData = ({data}) => {
 // Trigger fetch of country specific COVID-19 data on select change
 // Insert data
 // Log errors and display no data if error
-countrySelector.addEventListener("change", (event) => {
+countrySelector.addEventListener('change', (event) => {
 	const country3Letters = event.target.value;
 	// prettier-ignore
 	getData(`https://covidapi.info/api/v1/country/${country3Letters}/latest`)
@@ -80,24 +80,24 @@ countrySelector.addEventListener("change", (event) => {
 
 // line chart
 const chartMaker = (dataObj) => {
-	container2.style.display = "block"; // Show the container and the children H2 + p
-	new Chart(document.getElementById("line-chart"), {
-		type: "line",
+	container2.style.display = 'block'; // Show the container and the children H2 + p
+	new Chart(document.getElementById('line-chart'), {
+		type: 'line',
 		data: {
 			labels: dataObj.time,
 			datasets: [
 				{
 					data: dataObj.confirmed,
-					label: "Confirmed Cases",
-					borderColor: "#3e95cd",
+					label: 'Confirmed Cases',
+					borderColor: '#3e95cd',
 					fill: false
 				}
 			]
 		},
 		options: {
 			title: {
-				display: true,
-				text: "Confirmed Cases"
+				display: false,
+				text: 'Confirmed Cases'
 			}
 		}
 	});
