@@ -76,6 +76,11 @@ html {
 }
 
 @media screen and (max-width: 768px) {
+	.hero.is-small .hero-body {
+		padding-bottom: 0.5rem;
+		padding-top: 0.5rem;
+	}
+
 	#countries {
 		border: 0px;
 		min-width: 300px;
