@@ -42,6 +42,11 @@ html {
 	margin-bottom: 0;
 }
 
+.select-country {
+	margin-top: 25px;
+	margin-bottom: 10px;
+}
+
 .select {
 	display: flex;
 	flex-direction: column;
