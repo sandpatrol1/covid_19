@@ -1,9 +1,15 @@
 h1,
 h2,
 h3,
+h5,
 p,
+html,
 select {
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html {
+	background-color: #fafafa;
 }
 
 #title {
@@ -15,6 +21,10 @@ select {
 	margin-top: 0;
 }
 
+.bio-icon {
+	padding-left: 25px;
+}
+
 #data {
 	display: flex;
 	flex-direction: column;
@@ -22,12 +32,30 @@ select {
 	align-items: center;
 }
 
+.country-title {
+	padding-top: 20px;
+	margin-bottom: 0px;
+	line-height: 0;
+}
+
+.content h4 {
+	margin-bottom: 0;
+}
+
+.select-country {
+	margin-top: 25px;
+	margin-bottom: 10px;
+}
+
+.select {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 #countries {
-	min-width: 300px;
-	max-width: 300px;
-	height: 30px;
-	font-size: 16px;
-	border: 1px solid;
+	min-width: 500px;
 }
 
 #container1 {
@@ -36,18 +64,36 @@ select {
 
 #container2 {
 	display: none;
+	padding-top: 25px;
 }
 
 .info {
-	min-width: 300px;
-	max-width: 300px;
+	min-width: 500px;
+	max-width: 500px;
 	border-bottom: #000000 1px solid;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 13px;
+	padding-bottom: 13px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
 	#countries {
 		border: 0px;
+		min-width: 300px;
+	}
+	.info {
+		max-width: 300px;
+	}
+	#countries {
+		max-width: 300px;
+	}
+	.info {
+		min-width: 300px;
+	}
+	#line-chart {
+		max-width: 300px;
+		max-height: 300px;
+	}
+	.disclaimer {
+		max-width: 300px;
 	}
 }
