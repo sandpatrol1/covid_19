@@ -59,14 +59,15 @@ html {
 
 #container2 {
 	display: none;
+	padding-top: 25px;
 }
 
 .info {
 	min-width: 500px;
 	max-width: 500px;
 	border-bottom: #000000 1px solid;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 13px;
+	padding-bottom: 13px;
 }
 
 @media screen and (max-width: 768px) {
