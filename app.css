@@ -21,6 +21,10 @@ html {
 	margin-top: 0;
 }
 
+.bio-icon {
+	padding-left: 25px;
+}
+
 #data {
 	display: flex;
 	flex-direction: column;

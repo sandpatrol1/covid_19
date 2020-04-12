@@ -25,6 +25,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css"
           <div class="container">
             <h1 class="title">
               COVID-19 Status
+              <span class="icon has-text-info has-text-white bio-icon">
+                <i class="fas fa-biohazard has-text-white"></i>
+              </span>
             </h1>
             <h2 class="subtitle">
               Country Information
@@ -64,12 +67,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css"
           <div id="container2">
             <canvas id="line-chart" width="500" height="500 "></canvas>
           </div>
+          <div id="container3">
+            <div class="is-medium">
+                <h2 id="date" class="info">
+                  Country specific data is subject to different approaches to testing, diagnosis etc. This app uses data from John Hopkins University made available through API initiative here: https://covidapi.info/ Notice: data is subject to errors.
+                </h2>
+            </div> 
+           </div>
       </div>
     </div>
     <footer class="footer">
             <div class="content footer-content">
               <p class="disclaimer">
-                Country specific data is subject to different approaches to testing, diagnosis etc. This app uses data from John Hopkins University made available through API initiative here: https://covidapi.info/ Notice: data is subject to errors.
               </p>
             </div>
           </footer>
