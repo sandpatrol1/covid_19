@@ -5,7 +5,7 @@
 	"display": "standalone",
 	"orientation": "portrait",
 	"Scope": "/",
-	"start_url": "/index.html",
+	"start_url": "/covid_19_country_tracker/",
 	"icons": [
 		{
 			"src": "images/icons/icon-72x72.png",
