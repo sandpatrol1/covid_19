@@ -105,11 +105,8 @@ const chartMaker = (dataObj) => {
 
 // PWA Sevice workers
 window.addEventListener('load', (e) => {
-	new PWAConfApp();
 	registerSW();
 });
-
-registerSW();
 
 async function registerSW() {
 	if ('serviceWorker' in navigator) {

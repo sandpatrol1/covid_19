@@ -6,7 +6,7 @@ self.addEventListener('fetch', async (event) => {
 	console.log('fetch event');
 });
 
-const cacheName = 'pwa-conf-v1';
+const cacheName = 'covid-19';
 const staticAssets = [ './', './index.html', './app.js', './country_code.js', './app.css' ];
 
 self.addEventListener('install', async (event) => {
