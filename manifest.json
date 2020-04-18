@@ -1,5 +1,6 @@
 {
 	"name": "COVID-19",
+	"short_name": "COVID-19",
 	"theme_color": "#4a4a4a",
 	"background_color": "#fafafa",
 	"display": "standalone",
