@@ -4,8 +4,8 @@
 	"background_color": "#fafafa",
 	"display": "standalone",
 	"orientation": "portrait",
-	"Scope": "https://sandpatrol1.github.io/covid_19_country_tracker/",
-	"start_url": "https://sandpatrol1.github.io/covid_19_country_tracker/",
+	"Scope": "/",
+	"start_url": "/",
 	"icons": [
 		{
 			"src": "images/icons/icon-72x72.png",
